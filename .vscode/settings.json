@@ -1,0 +1,13 @@
+{
+  "liveSassCompile.settings.excludeList": ["/**/styles/**"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "~"
+    }
+  ],
+  "editor.wordWrapColumn": 120,
+  "editor.formatOnSave": true,
+  "minify.minifyExistingOnSave": true
+}

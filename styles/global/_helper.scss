@@ -1,0 +1,30 @@
+._space {
+  margin-bottom: var(--s-space);
+}
+._gap {
+  margin-bottom: var(--s-gap);
+}
+@media (max-width: 1023px) {
+  ._desktop {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) {
+  ._mobile {
+    display: none !important;
+  }
+}
+._body {
+  font-family: var(--s-body);
+}
+._heading {
+  line-height: 1.3;
+  font-family: var(--s-heading);
+  font-weight: var(--s-heading-weight);
+}
+._h {
+  font-family: var(--s-heading);
+}
+.hide {
+  display: none !important;
+}

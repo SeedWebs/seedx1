@@ -1,0 +1,18 @@
+.item {
+  background-color: var(--s-bg-2);
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
+}
+.pic {
+  > div {
+    padding-top: 52.5%;
+  }
+  @media (min-width: 1024px) {
+    min-width: 65.7895%;
+  }
+}
+.info {
+  padding: var(--s-space);
+}

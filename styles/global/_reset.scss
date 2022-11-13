@@ -1,0 +1,128 @@
+// REF https://www.joshwcomeau.com/css/custom-css-reset/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+// https://github.com/postcss/postcss-100vh-fix
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
+}
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p {
+  overflow-wrap: break-word;
+  margin-bottom: 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-family: var(--s-heading);
+  font-weight: var(--s-heading-weight);
+}
+// MORE BY SEEDWEBS.COM
+h1 {
+  font-size: 1.8em;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 0.875em;
+}
+html {
+  font-family: var(--s-body);
+  background-color: var(--s-bg-1);
+  color: var(--s-text-1);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th {
+  text-align: left;
+}
+th,
+td {
+  vertical-align: top;
+}
+ol,
+ul {
+  margin: 0 0 1.5em 0;
+  padding-left: 1.2em;
+}
+nav,
+button,
+label,
+legend {
+  line-height: 1.3;
+  font-family: var(--s-heading);
+}
+hr {
+  margin-top: var(--s-space);
+  margin-bottom: var(--s-space);
+  color: var(--s-border-1);
+  border: none;
+  border-bottom: 1px solid;
+  border-color: var(--s-border-2);
+}
+blockquote {
+  font-family: var(--s-heading-alt);
+  font-weight: var(--s-heading-alt-weight);
+  line-height: 1.6;
+  font-size: 1.25em;
+  margin-top: calc(var(--s-space) * 1.25);
+  margin-bottom: calc(var(--s-space) * 1.25);
+}
+fieldset {
+  border: 1px solid var(--s-border-1);
+  padding: var(--s-gap);
+  margin: 1rem 0;
+  border-radius: var(--s-rounded-1);
+}

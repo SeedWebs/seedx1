@@ -1,0 +1,31 @@
+.item {
+  margin: 0 calc(var(--s-gap) * -1) var(--s-space);
+  background-color: var(--s-bg-2);
+  @media (min-width: 1024px) {
+    margin: 0 0 var(--s-space);
+    display: flex;
+    align-items: center;
+  }
+}
+.pic {
+  @media (min-width: 1024px) {
+    min-width: 64%;
+  }
+}
+.info {
+  padding: var(--s-space);
+  text-align: center;
+  > div {
+    flex-direction: column;
+  }
+  @media (min-width: 1024px) {
+    text-align: unset;
+    h1 {
+      text-align: left;
+      margin-top: var(--s-gap);
+    }
+    > div {
+      flex-direction: unset;
+    }
+  }
+}

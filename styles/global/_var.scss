@@ -1,0 +1,44 @@
+// VAR
+:root {
+  --s-gap: 16px;
+  --s-space: 16px;
+  --s-color-1: #023456;
+  --s-color-2: rgb(170, 132, 71);
+  --s-color-3: #47be9d;
+  --s-color-4: #67d88f;
+  --s-color-5: #ffa900;
+  --s-color-6: #ff4d00;
+  --s-noti: #f54600;
+  --s-text-1: #222;
+  --s-text-2: #9a9383;
+  --s-bg-1: #fff;
+  --s-bg-2: #f6f2ea;
+  --s-border-1: #d5d5d7;
+  --s-border-2: #e5e5e7;
+  --s-rounded-1: 3px;
+  --s-rounded-2: 5px;
+  --s-head-text: var(--s-text-1);
+  --s-head-hover: var(--s-head-text);
+  --s-head-bg: var(--s-bg-1);
+  --s-head-height: 50px;
+  --s-nav-width: 280px;
+  --s-nav-bg: var(--s-color-1);
+  --s-nav-text: #fff;
+  --s-nav-hover: var(--s-color-2);
+  --s-body: -apple-system, 'Helvetica Neue', sans-serif;
+  --s-heading: var(--s-body);
+  --s-content-width: 100%;
+  --s-container-width: 1180px;
+  @media (min-width: 720px) {
+    --s-gap: 20px;
+    --s-space: 20px;
+    --s-content-width: 750px;
+  }
+  @media (min-width: 1024px) {
+    --s-space: 24px;
+    --s-head-height: 70px;
+  }
+  @media (min-width: 1200px) {
+    --s-space: 30px;
+  }
+}

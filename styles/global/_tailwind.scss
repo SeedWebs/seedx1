@@ -1,0 +1,145 @@
+// REF - https://tailwindcss.com/
+
+// DISPLAY
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.grid {
+  display: grid;
+}
+@mixin s_display {
+  &flex {
+    display: flex;
+  }
+  &inline-flex {
+    display: inline-flex;
+  }
+  &grid {
+    display: grid;
+  }
+}
+
+// TEXT-ALIGN
+.text-left {
+  text-align: left;
+  h1 {
+    text-align: left;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+@mixin s_align {
+  &text-left {
+    text-align: left;
+  }
+  &text-center {
+    text-align: center;
+  }
+  &text-right {
+    text-align: right;
+  }
+}
+
+// JUSTIFY-CONTENT
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+@mixin s_justify {
+  &justify-start {
+    justify-content: flex-start;
+  }
+  &justify-end {
+    justify-content: flex-end;
+  }
+  &justify-center {
+    justify-content: center;
+  }
+  &justify-between {
+    justify-content: space-between;
+  }
+}
+
+// ALIGN-ITEMS
+.items-start {
+  align-items: flex-start !important;
+}
+.items-center {
+  align-items: center !important;
+}
+@mixin s_items {
+  &items-start {
+    align-items: flex-start !important;
+  }
+  &items-center {
+    align-items: center !important;
+  }
+}
+
+$sm: 600px; // (Change to fit Blocks)
+$lg: 1024px; // (Change to fit Other CSS)
+
+@media (min-width: $sm) {
+  .sm\: {
+    @include s_align;
+    @include s_justify;
+    @include s_display;
+    @include s_items;
+  }
+}
+@media (min-width: $lg) {
+  .lg\: {
+    @include s_align;
+    @include s_justify;
+    @include s_display;
+    @include s_items;
+    &m-0 {
+      margin: 0 !important;
+    }
+  }
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.drop-shadow {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+  overflow: visible;
+  &-md {
+    filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
+    overflow: visible;
+  }
+  &-lg {
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+    overflow: visible;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
