@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function CoverImage({ title, coverImage, slug }: Props) {
-  const image = <Image width={2000} height={1000} alt={`Cover Image for ${title}`} src={coverImage?.node.sourceUrl} />;
+  const image = <Image width={720} height={480} alt={`Cover Image for ${title}`} src={coverImage?.node.sourceUrl} />;
   return (
     <div className={styles.cover}>
       {slug ? (
