@@ -1,9 +1,13 @@
 import Container from '../components/container';
 import Layout from '../components/layout';
+import Head from 'next/head';
 
 export default function About({ preview }) {
   return (
     <Layout preview={preview}>
+      <Head>
+        <title>ABOUT</title>
+      </Head>
       <Container>
         <div className='s-content'>
           <h1>About</h1>
