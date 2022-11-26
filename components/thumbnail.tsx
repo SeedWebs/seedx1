@@ -16,7 +16,7 @@ interface Props {
 }
 
 export default function Thumbnail({ title, thumbnail, slug, width, height, priority }: Props) {
-  const image = <Image width={width} height={height} alt={`Cover Image for ${title}`} src={thumbnail?.node.sourceUrl} priority={priority} />;
+  const image = <Image width={width} height={height} alt={`Cover Image for ${title}`} src={thumbnail?.node.sourceUrl} priority={priority} sizes='(max-width: 768px) 100vw,750px' />;
   return (
     <div className={styles.pic}>
       {slug ? (
