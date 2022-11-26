@@ -3,15 +3,11 @@ import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Container from '../components/container';
-import PostBody from '../components/post-body';
-import MoreStories from '../components/more-stories';
-import PostHeader from '../components/post-header';
-import SectionSeparator from '../components/section-separator';
+import Single from '../components/single';
 import Layout from '../components/layout';
-import PostTitle from '../components/post-title';
-import Tags from '../components/tags';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../lib/api';
 import { SITE_NAME } from '../lib/constants';
+import More from '../components/more';
 
 export default function Post({ post, posts, preview }) {
   const router = useRouter();
@@ -25,21 +21,17 @@ export default function Post({ post, posts, preview }) {
     <Layout preview={preview}>
       <Container>
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <h2>Loading…</h2>
         ) : (
           <>
-            <article>
-              <Head>
-                <title>{post.title + ' • ' + SITE_NAME}</title>
-                <meta property='og:image' content={post.featuredImage?.node.sourceUrl} />
-              </Head>
-              <PostHeader title={post.title} coverImage={post.featuredImage} date={post.date} author={post.author} categories={post.categories} />
-              <PostBody content={post.content} />
-              <footer>{post.tags.edges.length > 0 && <Tags tags={post.tags} />}</footer>
-            </article>
-
-            <SectionSeparator />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            <Head>
+              <title>{post.title + ' • ' + SITE_NAME}</title>
+              <meta property='og:image' content={post.featuredImage?.node.sourceUrl} />
+            </Head>
+            <Single title={post.title} thumbnail={post.featuredImage} date={post.date} author={post.author} categories={post.categories} body={post.content} tags={post.tags} />
+            <br />
+            <h2 className='text-center _space'>More Stories</h2>
+            {morePosts.length > 0 && <More posts={morePosts} />}
           </>
         )}
       </Container>

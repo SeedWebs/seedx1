@@ -1,7 +1,7 @@
-.cover {
+.pic {
   line-height: 0;
   position: relative;
-  padding-top: 66.666666%;
+  padding-top: 66.666666%; // 3:2 Ratio
   img {
     position: absolute;
     object-fit: cover;

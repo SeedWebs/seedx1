@@ -10,8 +10,8 @@
 
 // GENERAL
 :root {
-  --s-body: 'LINESeedSansTH', sans-serif;
-  // --s-heading: 'LINESeedSansTH', sans-serif;
+  --s-body: sans-serif;
+  --s-heading: 'LINESeedSansTH', sans-serif;
   --s-heading-weight: 700;
 }
 #__next {
@@ -46,10 +46,6 @@ time {
   max-width: var(--s-container-width);
   margin-left: auto;
   margin-right: auto;
-  .s-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 .s-content {
   max-width: var(--s-content-width);

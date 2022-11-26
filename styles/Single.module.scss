@@ -8,8 +8,10 @@
   }
 }
 .pic {
+  margin: 0 calc(var(--s-gap) * -1);
   @media (min-width: 1024px) {
-    min-width: 64%;
+    margin: 0;
+    min-width: 65.7895%;
   }
 }
 .info {
@@ -28,4 +30,9 @@
       flex-direction: unset;
     }
   }
+}
+.body {
+  font-size: 1.125em;
+  max-width: var(--s-content-width);
+  margin: 0 auto;
 }
